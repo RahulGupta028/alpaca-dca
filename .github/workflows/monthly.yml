@@ -1,0 +1,37 @@
+name: Monthly TSLA limit buy
+
+on:
+  schedule:
+    # 12:30 PM America/New_York:
+    # - During EST (winter): 17:30 UTC
+    # - During EDT (summer): 16:30 UTC
+    #
+    # GitHub cron is UTC and does NOT handle timezone/DST automatically.
+    # So we run BOTH times; the script will still place an order either way.
+    - cron: "30 17 7 * *"
+    - cron: "30 16 7 * *"
+  workflow_dispatch: {}
+
+jobs:
+  trade:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install alpaca-py
+
+      - name: Run trade script
+        env:
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+          ALPACA_PAPER: ${{ secrets.ALPACA_PAPER }}
+        run: |
+          python trade.py
