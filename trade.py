@@ -1,17 +1,10 @@
 import os
 from decimal import Decimal, ROUND_DOWN
-from datetime import datetime, timezone, date
+from datetime import datetime, timezone
 
 from alpaca.trading.client import TradingClient
-from alpaca.trading.requests import (
-    LimitOrderRequest,
-    GetOrdersRequest,
-)
-from alpaca.trading.enums import (
-    OrderSide,
-    TimeInForce,
-    QueryOrderStatus,
-)
+from alpaca.trading.requests import LimitOrderRequest, GetOrdersRequest
+from alpaca.trading.enums import OrderSide, TimeInForce, QueryOrderStatus
 
 from alpaca.data.historical import StockHistoricalDataClient
 from alpaca.data.requests import StockBarsRequest
@@ -30,44 +23,65 @@ trading = TradingClient(API_KEY, SECRET_KEY, paper=PAPER)
 data = StockHistoricalDataClient(API_KEY, SECRET_KEY)
 
 
-def already_has_open_buy_order(symbol: str) -> bool:
-    # If the workflow runs twice (DST UTC cron), this prevents double-orders
+def _side_str(side) -> str:
+    return getattr(side, "value", str(side)).lower()
+
+
+def has_buy_order_today(symbol: str) -> bool:
+    """
+    Returns True if any BUY order for `symbol` was created today (UTC),
+    regardless of status (open/filled/canceled), to prevent duplicates when
+    cron runs twice or workflow is re-run manually.
+    """
+    today_utc = datetime.now(timezone.utc).date()
+
     orders = trading.get_orders(
         filter=GetOrdersRequest(
-            status=QueryOrderStatus.OPEN,
+            status=QueryOrderStatus.ALL,  # include filled/canceled too
             symbols=[symbol],
             nested=True,
+            limit=200,
         )
     )
+
     for o in orders:
-        # o.side is an enum-like value; normalize to string safely
-        side = getattr(o.side, "value", str(o.side)).lower()
-        if o.symbol == symbol and side == "buy":
+        if getattr(o, "symbol", None) != symbol:
+            continue
+        if _side_str(getattr(o, "side", "")) != "buy":
+            continue
+
+        created = getattr(o, "created_at", None)
+        if created is None:
+            continue
+
+        # created_at is usually timezone-aware; normalize to UTC date
+        created_date_utc = created.astimezone(timezone.utc).date()
+        if created_date_utc == today_utc:
             return True
+
     return False
 
 
 if __name__ == "__main__":
-    print(f"UTC now: {datetime.now(timezone.utc).isoformat()}")
+    now = datetime.now(timezone.utc)
+    print(f"UTC now: {now.isoformat()}")
     print(f"Mode: {'PAPER' if PAPER else 'LIVE'}")
 
-    if already_has_open_buy_order(SYMBOL):
-        print(f"Existing OPEN {SYMBOL} BUY order found; skipping to avoid duplicates.")
+    if has_buy_order_today(SYMBOL):
+        print(f"A {SYMBOL} BUY order already exists for today (UTC); skipping.")
         raise SystemExit(0)
 
-    # Get the most recent DAILY close (works for weekends, premarket, holidays)
+    # Get the most recent DAILY close (works for weekends/holidays)
     bars_req = StockBarsRequest(
         symbol_or_symbols=SYMBOL,
         timeframe=TimeFrame.Day,
-        limit=10,  # extra cushion for long weekends/holidays
+        limit=10,
     )
     bars = data.get_stock_bars(bars_req).data.get(SYMBOL, [])
     if not bars:
         raise RuntimeError(f"No daily bars returned for {SYMBOL}.")
 
-    last_bar = bars[-1]
-    last_close = Decimal(str(last_bar.close))
-
+    last_close = Decimal(str(bars[-1].close))
     limit_price = (last_close * (Decimal("1") - DISCOUNT)).quantize(
         Decimal("0.01"), rounding=ROUND_DOWN
     )
@@ -86,4 +100,3 @@ if __name__ == "__main__":
     )
 
     print("Submitted order id:", order.id)
-    print("Submitted on (UTC date):", date.today().isoformat())
