@@ -1,16 +1,13 @@
-name: Monthly TSLA limit buy
+name: Monthly limit buy for fractional order but keeping GTD orders alive
 
 on:
   schedule:
-    # 13:30 PM America/New_York:
-    # - During EST (winter): 18:30 UTC
-    # - During EDT (summer): 17:30 UTC
-    #
-    # GitHub cron is UTC and does NOT handle timezone/DST automatically.
-    # So we run BOTH times; the script will still place an order either way.
-    - cron: "30 18 7 * *"
-    - cron: "30 17 7 * *"
+    - cron: "30 14 * * 1-5"  # 09:30 EST
+    - cron: "30 13 * * 1-5"  # 09:30 EDT
   workflow_dispatch: {}
+
+permissions:
+  contents: write
 
 jobs:
   trade:
