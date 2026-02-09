@@ -29,7 +29,7 @@ DEFAULT_TRANCHE_NOTIONAL = Decimal("60")
 DISCOUNT = Decimal("0.05")               # 5% below last daily close (on tranche creation day)
 DATA_FEED = DataFeed.IEX                # Basic plan compatible (note: some tickers may require SIP depending on your plan)
 STATE_FILE = "tranches_multi.json"
-MONTHLY_DAY = 9
+MONTHLY_DAY = 15
 
 MIN_REPOST_NOTIONAL = Decimal("1.00")   # don't repost tiny leftover
 COMPLETE_EPS = Decimal("0.01")          # treat <= 1 cent remaining as complete
