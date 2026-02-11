@@ -23,12 +23,12 @@ jobs:
       - name: Install deps
         run: |
           python -m pip install --upgrade pip
-          pip install alpaca-py pytz
+          pip install alpaca-py
 
       - name: Run trade script
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # <-- required for committing state
           ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
           ALPACA_PAPER: ${{ secrets.ALPACA_PAPER }}
-        run: |
-          python trade.py
+        run: python trade.py
