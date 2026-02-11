@@ -324,6 +324,13 @@ if __name__ == "__main__":
             print(f"Created tranche: {sym} {month_key} notional={notional} limit={limit_price} last_close={last_close}")
     else:
         print("Not tranche creation day; no new tranches created.")
+        
+    print(f"Loaded tranches: {len(state.get('tranches', []))}")
+    for t in state.get("tranches", []):
+          print("TRANCHE", t.get("symbol"), t.get("month_key"),
+          "status=", t.get("status"),
+          "remaining=", t.get("remaining_notional"),
+          "limit=", t.get("limit_price"))
 
     # 2) Repost DAY orders for active tranches (weekdays only)
     if not is_weekday(today):
