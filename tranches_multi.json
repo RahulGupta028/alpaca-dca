@@ -1,7 +1,9 @@
 {
-  "last_sync_at_utc": "2026-02-11T03:48:24.674766Z",
+  "last_sync_at_utc": "2026-02-11T16:47:33.274924Z",
   "schema": 1,
-  "seen_order_filled_notional": {},
+  "seen_order_filled_notional": {
+    "576c88b5-2c51-4191-a59a-51a5c0de4fa4": "59.98"
+  },
   "tranches": [
     {
       "created_at_ny": "2026-02-10T22:48:24.433666-05:00",
@@ -16,12 +18,12 @@
     },
     {
       "created_at_ny": "2026-02-10T22:48:24.433666-05:00",
-      "filled_notional_total": "0.00",
+      "filled_notional_total": "59.98",
       "id": "ALAB:2026-02",
       "limit_price": "174.14",
       "month_key": "2026-02",
       "notional": "60",
-      "remaining_notional": "60",
+      "remaining_notional": "0.02",
       "status": "active",
       "symbol": "ALAB"
     },
@@ -136,5 +138,5 @@
       "symbol": "TSM"
     }
   ],
-  "updated_at_ny": "2026-02-10T22:48:24.433666-05:00"
+  "updated_at_ny": "2026-02-11T11:47:33.196294-05:00"
 }
