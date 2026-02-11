@@ -35,6 +35,7 @@ MIN_REPOST_NOTIONAL = Decimal("1.00")   # don't repost tiny leftover
 COMPLETE_EPS = Decimal("0.01")          # treat <= 1 cent remaining as complete
 LOOKBACK_DAYS_FIRST_SYNC = 180
 # ==================================================
+FORCE_CREATE_TRANCHES = os.environ.get("FORCE_CREATE_TRANCHES", "").lower() == "true"
 
 NY = ZoneInfo("America/New_York")
 
@@ -296,8 +297,7 @@ if __name__ == "__main__":
     sync_fills_into_state(state)
 
     # 1) Create new monthly tranche(s) on the 15th (once per symbol per month)
-    force = os.environ.get("FORCE_CREATE_TRANCHES", "").lower() == "true"
-    if force or should_create_new_tranche(today):
+    if FORCE_CREATE_TRANCHES or should_create_new_tranche(today):
         for sym in SYMBOLS:
             tranche_id = make_tranche_id(sym, month_key)
             exists = any(t.get("id") == tranche_id for t in state["tranches"])
