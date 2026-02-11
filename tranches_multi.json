@@ -1,7 +1,140 @@
 {
-  "last_sync_at_utc": "2026-02-11T03:30:15.012386Z",
+  "last_sync_at_utc": "2026-02-11T03:48:24.674766Z",
   "schema": 1,
   "seen_order_filled_notional": {},
-  "tranches": [],
-  "updated_at_ny": "2026-02-10T22:30:14.548288-05:00"
+  "tranches": [
+    {
+      "created_at_ny": "2026-02-10T22:48:24.433666-05:00",
+      "filled_notional_total": "0.00",
+      "id": "IBIT:2026-02",
+      "limit_price": "37.03",
+      "month_key": "2026-02",
+      "notional": "60",
+      "remaining_notional": "60",
+      "status": "active",
+      "symbol": "IBIT"
+    },
+    {
+      "created_at_ny": "2026-02-10T22:48:24.433666-05:00",
+      "filled_notional_total": "0.00",
+      "id": "ALAB:2026-02",
+      "limit_price": "174.14",
+      "month_key": "2026-02",
+      "notional": "60",
+      "remaining_notional": "60",
+      "status": "active",
+      "symbol": "ALAB"
+    },
+    {
+      "created_at_ny": "2026-02-10T22:48:24.433666-05:00",
+      "filled_notional_total": "0.00",
+      "id": "AMD:2026-02",
+      "limit_price": "202.92",
+      "month_key": "2026-02",
+      "notional": "60",
+      "remaining_notional": "60",
+      "status": "active",
+      "symbol": "AMD"
+    },
+    {
+      "created_at_ny": "2026-02-10T22:48:24.433666-05:00",
+      "filled_notional_total": "0.00",
+      "id": "ARM:2026-02",
+      "limit_price": "119.66",
+      "month_key": "2026-02",
+      "notional": "60",
+      "remaining_notional": "60",
+      "status": "active",
+      "symbol": "ARM"
+    },
+    {
+      "created_at_ny": "2026-02-10T22:48:24.433666-05:00",
+      "filled_notional_total": "0.00",
+      "id": "AVGO:2026-02",
+      "limit_price": "323.35",
+      "month_key": "2026-02",
+      "notional": "60",
+      "remaining_notional": "60",
+      "status": "active",
+      "symbol": "AVGO"
+    },
+    {
+      "created_at_ny": "2026-02-10T22:48:24.433666-05:00",
+      "filled_notional_total": "0.00",
+      "id": "ASML:2026-02",
+      "limit_price": "1343.20",
+      "month_key": "2026-02",
+      "notional": "60",
+      "remaining_notional": "60",
+      "status": "active",
+      "symbol": "ASML"
+    },
+    {
+      "created_at_ny": "2026-02-10T22:48:24.433666-05:00",
+      "filled_notional_total": "0.00",
+      "id": "MRVL:2026-02",
+      "limit_price": "77.91",
+      "month_key": "2026-02",
+      "notional": "60",
+      "remaining_notional": "60",
+      "status": "active",
+      "symbol": "MRVL"
+    },
+    {
+      "created_at_ny": "2026-02-10T22:48:24.433666-05:00",
+      "filled_notional_total": "0.00",
+      "id": "MU:2026-02",
+      "limit_price": "354.53",
+      "month_key": "2026-02",
+      "notional": "60",
+      "remaining_notional": "60",
+      "status": "active",
+      "symbol": "MU"
+    },
+    {
+      "created_at_ny": "2026-02-10T22:48:24.433666-05:00",
+      "filled_notional_total": "0.00",
+      "id": "NVDA:2026-02",
+      "limit_price": "178.99",
+      "month_key": "2026-02",
+      "notional": "100",
+      "remaining_notional": "100",
+      "status": "active",
+      "symbol": "NVDA"
+    },
+    {
+      "created_at_ny": "2026-02-10T22:48:24.433666-05:00",
+      "filled_notional_total": "0.00",
+      "id": "PLTR:2026-02",
+      "limit_price": "132.49",
+      "month_key": "2026-02",
+      "notional": "60",
+      "remaining_notional": "60",
+      "status": "active",
+      "symbol": "PLTR"
+    },
+    {
+      "created_at_ny": "2026-02-10T22:48:24.433666-05:00",
+      "filled_notional_total": "0.00",
+      "id": "TSLA:2026-02",
+      "limit_price": "403.98",
+      "month_key": "2026-02",
+      "notional": "100",
+      "remaining_notional": "100",
+      "status": "active",
+      "symbol": "TSLA"
+    },
+    {
+      "created_at_ny": "2026-02-10T22:48:24.433666-05:00",
+      "filled_notional_total": "0.00",
+      "id": "TSM:2026-02",
+      "limit_price": "343.80",
+      "month_key": "2026-02",
+      "notional": "60",
+      "remaining_notional": "60",
+      "status": "active",
+      "symbol": "TSM"
+    }
+  ],
+  "updated_at_ny": "2026-02-10T22:48:24.433666-05:00"
 }
