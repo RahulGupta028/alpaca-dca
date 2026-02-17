@@ -1,11 +1,14 @@
 {
-  "last_sync_at_utc": "2026-02-16T16:26:46.331396Z",
+  "last_sync_at_utc": "2026-02-17T16:40:26.215304Z",
   "schema": 1,
   "seen_order_filled_notional": {
     "13514b10-7fa1-4581-b543-94190c085838": "59.98",
     "50a65341-6ffe-45bf-9985-1b4485917484": "59.98",
     "5279e0a1-448e-478c-b372-4794ba30b88f": "59.98",
-    "576c88b5-2c51-4191-a59a-51a5c0de4fa4": "59.98"
+    "576c88b5-2c51-4191-a59a-51a5c0de4fa4": "59.98",
+    "626e8e85-7c4f-47cb-ad46-2a67c6801dba": "99.99",
+    "6da394f6-93a3-4efd-8b67-696382559c28": "59.99",
+    "ca667bf0-e4c3-4593-85e2-70e0e858cf09": "59.99"
   },
   "tranches": [
     {
@@ -32,13 +35,13 @@
     },
     {
       "created_at_ny": "2026-02-10T22:48:24.433666-05:00",
-      "filled_notional_total": "0.00",
+      "filled_notional_total": "59.99",
       "id": "AMD:2026-02",
       "limit_price": "202.92",
       "month_key": "2026-02",
       "notional": "60",
-      "remaining_notional": "60",
-      "status": "active",
+      "remaining_notional": "0.00",
+      "status": "complete",
       "symbol": "AMD"
     },
     {
@@ -54,13 +57,13 @@
     },
     {
       "created_at_ny": "2026-02-10T22:48:24.433666-05:00",
-      "filled_notional_total": "0.00",
+      "filled_notional_total": "59.99",
       "id": "AVGO:2026-02",
       "limit_price": "323.35",
       "month_key": "2026-02",
       "notional": "60",
-      "remaining_notional": "60",
-      "status": "active",
+      "remaining_notional": "0.00",
+      "status": "complete",
       "symbol": "AVGO"
     },
     {
@@ -120,13 +123,13 @@
     },
     {
       "created_at_ny": "2026-02-10T22:48:24.433666-05:00",
-      "filled_notional_total": "0.00",
+      "filled_notional_total": "99.99",
       "id": "TSLA:2026-02",
       "limit_price": "403.98",
       "month_key": "2026-02",
       "notional": "100",
-      "remaining_notional": "100",
-      "status": "active",
+      "remaining_notional": "0.00",
+      "status": "complete",
       "symbol": "TSLA"
     },
     {
@@ -141,5 +144,5 @@
       "symbol": "TSM"
     }
   ],
-  "updated_at_ny": "2026-02-16T11:26:46.041434-05:00"
+  "updated_at_ny": "2026-02-17T11:40:26.073760-05:00"
 }
