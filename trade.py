@@ -4,7 +4,11 @@ from datetime import datetime, timezone, timedelta, date
 from zoneinfo import ZoneInfo
 
 from alpaca.trading.client import TradingClient
-from alpaca.trading.requests import LimitOrderRequest, GetOrdersRequest
+from alpaca.trading.requests import (
+    LimitOrderRequest,
+    GetOrdersRequest,
+    GetCalendarRequest,
+)
 from alpaca.trading.enums import OrderSide, TimeInForce, QueryOrderStatus
 
 from alpaca.data.historical import StockHistoricalDataClient
@@ -27,7 +31,7 @@ NOTIONAL_BY_SYMBOL = {
 
 DEFAULT_TRANCHE_NOTIONAL = Decimal("60")
 DISCOUNT = Decimal("0.05")               # 5% below last daily close (on tranche creation day)
-DATA_FEED = DataFeed.IEX                # Basic plan compatible (note: some tickers may require SIP depending on your plan)
+DATA_FEED = DataFeed.IEX                # may need SIP depending on your Alpaca data plan
 STATE_FILE = "tranches_multi.json"
 MONTHLY_DAY = 15
 
@@ -35,7 +39,11 @@ MIN_REPOST_NOTIONAL = Decimal("1.00")   # don't repost tiny leftover
 COMPLETE_EPS = Decimal("0.01")          # treat <= 1 cent remaining as complete
 LOOKBACK_DAYS_FIRST_SYNC = 180
 # ==================================================
+
+# Manual override: create tranches even if it's not the scheduled day
 FORCE_CREATE_TRANCHES = os.environ.get("FORCE_CREATE_TRANCHES", "").lower() == "true"
+# Optional override: create tranches for a specific month_key (YYYY-MM)
+TRANCHE_MONTH = os.environ.get("TRANCHE_MONTH", "").strip()
 
 NY = ZoneInfo("America/New_York")
 
@@ -112,19 +120,33 @@ def tranche_key_for_month(d: date) -> str:
     return f"{d.year:04d}-{d.month:02d}"
 
 
+def is_trading_day(d: date) -> bool:
+    cal = trading.get_calendar(GetCalendarRequest(start=d, end=d))
+    return bool(cal)
+
+
+def first_trading_day_on_or_after(d: date) -> date:
+    """
+    Find the first trading day on or after d, using Alpaca market calendar.
+    """
+    cal = trading.get_calendar(GetCalendarRequest(start=d, end=d + timedelta(days=14)))
+    if not cal:
+        # fallback: weekday-only
+        dd = d
+        while dd.weekday() >= 5:
+            dd += timedelta(days=1)
+        return dd
+    return cal[0].date
+
+
 def should_create_new_tranche(today: date) -> bool:
     """
-    Create monthly tranche on the 15th; if 15th is weekend, create next Monday.
-    (Holidays not handled.)
+    Create monthly tranche on the 15th; if market is closed on that date,
+    create on the next trading day (handles weekends + US market holidays).
     """
     anchor = monthly_anchor_date(today.year, today.month, MONTHLY_DAY)
-    while anchor.weekday() >= 5:
-        anchor = anchor + timedelta(days=1)
-    return today == anchor
-
-
-def is_weekday(d: date) -> bool:
-    return d.weekday() < 5
+    scheduled = first_trading_day_on_or_after(anchor)
+    return today == scheduled
 
 
 def make_tranche_id(symbol: str, month_key: str) -> str:
@@ -218,7 +240,6 @@ def sync_fills_into_state(state: dict):
     for tranche_id, delta in filled_notional_by_tranche.items():
         t = tranche_map.get(tranche_id)
         if not t:
-            # could happen if state file was deleted; ignore
             continue
 
         rem = Decimal(str(t.get("remaining_notional", "0.00")))
@@ -238,7 +259,7 @@ def sync_fills_into_state(state: dict):
 
 def open_order_exists_for_tranche(tranche: dict) -> bool:
     """
-    True if any OPEN BUY order exists for this tranche (symbol + month_key), regardless of date.
+    True if any OPEN BUY order exists for this tranche (symbol + month_key).
     """
     symbol = tranche["symbol"]
     month_key = tranche["month_key"]
@@ -264,8 +285,11 @@ def submit_day_order(tranche: dict, notional: Decimal):
     limit_price = Decimal(str(tranche["limit_price"])).quantize(Decimal("0.01"))
 
     today = datetime.now(NY).date()
-    yyyymmdd = today.strftime("%Y%m%d")
+    yyyymmdd = today.strftime("%Y%mdd")  # kept unique per run time, but safe to use correct date below
     hhmmss = datetime.now(NY).strftime("%H%M%S")
+
+    # Correct yyyymmdd (bugfix)
+    yyyymmdd = today.strftime("%Y%m%d")
 
     client_order_id = f"BOT-{symbol}-{month_key}-{yyyymmdd}-{hhmmss}"
 
@@ -286,18 +310,29 @@ def submit_day_order(tranche: dict, notional: Decimal):
 if __name__ == "__main__":
     now_ny = datetime.now(NY)
     today = now_ny.date()
-    month_key = tranche_key_for_month(today)
+
+    # month_key: either specified (YYYY-MM) or current month
+    month_key = TRANCHE_MONTH if TRANCHE_MONTH else tranche_key_for_month(today)
+
     print(f"NY now: {now_ny.isoformat()} | Mode: {'PAPER' if PAPER else 'LIVE'}")
     print(f"Symbols: {', '.join(SYMBOLS)}")
+    if FORCE_CREATE_TRANCHES:
+        print("FORCE_CREATE_TRANCHES=true (manual tranche creation enabled)")
+    if TRANCHE_MONTH:
+        print(f"TRANCHE_MONTH={TRANCHE_MONTH}")
 
     state = load_state()
     state.setdefault("tranches", [])
 
+    # Helpful debug
+    print(f"Loaded tranches: {len(state.get('tranches', []))}")
+
     # 0) Sync fills first so remaining_notional is accurate
     sync_fills_into_state(state)
 
-    # 1) Create new monthly tranche(s) on the 15th (once per symbol per month)
-    if FORCE_CREATE_TRANCHES or should_create_new_tranche(today):
+    # 1) Create new monthly tranche(s)
+    create_today = FORCE_CREATE_TRANCHES or should_create_new_tranche(today)
+    if create_today:
         for sym in SYMBOLS:
             tranche_id = make_tranche_id(sym, month_key)
             exists = any(t.get("id") == tranche_id for t in state["tranches"])
@@ -324,18 +359,12 @@ if __name__ == "__main__":
             })
             print(f"Created tranche: {sym} {month_key} notional={notional} limit={limit_price} last_close={last_close}")
     else:
-        print("Not tranche creation day; no new tranches created.")
-        
-    print(f"Loaded tranches: {len(state.get('tranches', []))}")
-    for t in state.get("tranches", []):
-          print("TRANCHE", t.get("symbol"), t.get("month_key"),
-          "status=", t.get("status"),
-          "remaining=", t.get("remaining_notional"),
-          "limit=", t.get("limit_price"))
+        scheduled = first_trading_day_on_or_after(monthly_anchor_date(today.year, today.month, MONTHLY_DAY))
+        print(f"Not tranche creation day; no new tranches created. Scheduled this month: {scheduled.isoformat()}")
 
-    # 2) Repost DAY orders for active tranches (weekdays only)
-    if not is_weekday(today):
-        print("Weekend; skipping order placement.")
+    # 2) Repost DAY orders for active tranches (trading days only)
+    if not is_trading_day(today):
+        print("Market closed today; skipping order placement.")
         state["updated_at_ny"] = now_ny.isoformat()
         save_state(state)
         commit_state_file_if_possible()
