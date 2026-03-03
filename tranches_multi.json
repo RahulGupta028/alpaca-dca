@@ -1,15 +1,17 @@
 {
-  "last_sync_at_utc": "2026-03-03T16:03:18.527370Z",
+  "last_sync_at_utc": "2026-03-03T17:09:42.305679Z",
   "schema": 1,
   "seen_order_filled_notional": {
     "13514b10-7fa1-4581-b543-94190c085838": "59.98",
+    "3eff5ec4-9ccc-4ec4-b2de-870969ad2c75": "59.99",
     "50a65341-6ffe-45bf-9985-1b4485917484": "59.98",
     "5279e0a1-448e-478c-b372-4794ba30b88f": "59.98",
     "576c88b5-2c51-4191-a59a-51a5c0de4fa4": "59.98",
     "626e8e85-7c4f-47cb-ad46-2a67c6801dba": "99.99",
     "6da394f6-93a3-4efd-8b67-696382559c28": "59.99",
     "ca667bf0-e4c3-4593-85e2-70e0e858cf09": "59.99",
-    "e67c5593-8552-4d44-a093-70999466ca03": "99.99"
+    "e67c5593-8552-4d44-a093-70999466ca03": "99.99",
+    "f526b8f6-33f5-460b-b708-ee1e25bf125c": "59.99"
   },
   "tranches": [
     {
@@ -47,13 +49,13 @@
     },
     {
       "created_at_ny": "2026-02-10T22:48:24.433666-05:00",
-      "filled_notional_total": "0.00",
+      "filled_notional_total": "59.99",
       "id": "ARM:2026-02",
       "limit_price": "119.66",
       "month_key": "2026-02",
       "notional": "60",
-      "remaining_notional": "60",
-      "status": "active",
+      "remaining_notional": "0.00",
+      "status": "complete",
       "symbol": "ARM"
     },
     {
@@ -69,13 +71,13 @@
     },
     {
       "created_at_ny": "2026-02-10T22:48:24.433666-05:00",
-      "filled_notional_total": "0.00",
+      "filled_notional_total": "59.99",
       "id": "ASML:2026-02",
       "limit_price": "1343.20",
       "month_key": "2026-02",
       "notional": "60",
-      "remaining_notional": "60",
-      "status": "active",
+      "remaining_notional": "0.00",
+      "status": "complete",
       "symbol": "ASML"
     },
     {
@@ -145,5 +147,5 @@
       "symbol": "TSM"
     }
   ],
-  "updated_at_ny": "2026-03-03T11:03:18.309429-05:00"
+  "updated_at_ny": "2026-03-03T12:09:42.131061-05:00"
 }
