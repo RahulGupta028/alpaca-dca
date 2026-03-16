@@ -1,5 +1,5 @@
 {
-  "last_sync_at_utc": "2026-03-13T15:09:38.468444Z",
+  "last_sync_at_utc": "2026-03-16T14:43:08.132021Z",
   "schema": 1,
   "seen_order_filled_notional": {
     "13514b10-7fa1-4581-b543-94190c085838": "59.98",
@@ -146,7 +146,139 @@
       "remaining_notional": "0.00",
       "status": "complete",
       "symbol": "TSM"
+    },
+    {
+      "created_at_ny": "2026-03-16T10:43:07.828454-04:00",
+      "filled_notional_total": "0.00",
+      "id": "IBIT:2026-03",
+      "limit_price": "39.39",
+      "month_key": "2026-03",
+      "notional": "60",
+      "remaining_notional": "60",
+      "status": "active",
+      "symbol": "IBIT"
+    },
+    {
+      "created_at_ny": "2026-03-16T10:43:07.828454-04:00",
+      "filled_notional_total": "0.00",
+      "id": "ALAB:2026-03",
+      "limit_price": "117.28",
+      "month_key": "2026-03",
+      "notional": "60",
+      "remaining_notional": "60",
+      "status": "active",
+      "symbol": "ALAB"
+    },
+    {
+      "created_at_ny": "2026-03-16T10:43:07.828454-04:00",
+      "filled_notional_total": "0.00",
+      "id": "AMD:2026-03",
+      "limit_price": "187.16",
+      "month_key": "2026-03",
+      "notional": "60",
+      "remaining_notional": "60",
+      "status": "active",
+      "symbol": "AMD"
+    },
+    {
+      "created_at_ny": "2026-03-16T10:43:07.828454-04:00",
+      "filled_notional_total": "0.00",
+      "id": "ARM:2026-03",
+      "limit_price": "113.34",
+      "month_key": "2026-03",
+      "notional": "60",
+      "remaining_notional": "60",
+      "status": "active",
+      "symbol": "ARM"
+    },
+    {
+      "created_at_ny": "2026-03-16T10:43:07.828454-04:00",
+      "filled_notional_total": "0.00",
+      "id": "AVGO:2026-03",
+      "limit_price": "307.40",
+      "month_key": "2026-03",
+      "notional": "60",
+      "remaining_notional": "60",
+      "status": "active",
+      "symbol": "AVGO"
+    },
+    {
+      "created_at_ny": "2026-03-16T10:43:07.828454-04:00",
+      "filled_notional_total": "0.00",
+      "id": "ASML:2026-03",
+      "limit_price": "1315.27",
+      "month_key": "2026-03",
+      "notional": "60",
+      "remaining_notional": "60",
+      "status": "active",
+      "symbol": "ASML"
+    },
+    {
+      "created_at_ny": "2026-03-16T10:43:07.828454-04:00",
+      "filled_notional_total": "0.00",
+      "id": "MRVL:2026-03",
+      "limit_price": "86.04",
+      "month_key": "2026-03",
+      "notional": "60",
+      "remaining_notional": "60",
+      "status": "active",
+      "symbol": "MRVL"
+    },
+    {
+      "created_at_ny": "2026-03-16T10:43:07.828454-04:00",
+      "filled_notional_total": "0.00",
+      "id": "MU:2026-03",
+      "limit_price": "423.81",
+      "month_key": "2026-03",
+      "notional": "60",
+      "remaining_notional": "60",
+      "status": "active",
+      "symbol": "MU"
+    },
+    {
+      "created_at_ny": "2026-03-16T10:43:07.828454-04:00",
+      "filled_notional_total": "0.00",
+      "id": "NVDA:2026-03",
+      "limit_price": "174.39",
+      "month_key": "2026-03",
+      "notional": "100",
+      "remaining_notional": "100",
+      "status": "active",
+      "symbol": "NVDA"
+    },
+    {
+      "created_at_ny": "2026-03-16T10:43:07.828454-04:00",
+      "filled_notional_total": "0.00",
+      "id": "PLTR:2026-03",
+      "limit_price": "143.79",
+      "month_key": "2026-03",
+      "notional": "60",
+      "remaining_notional": "60",
+      "status": "active",
+      "symbol": "PLTR"
+    },
+    {
+      "created_at_ny": "2026-03-16T10:43:07.828454-04:00",
+      "filled_notional_total": "0.00",
+      "id": "TSLA:2026-03",
+      "limit_price": "380.28",
+      "month_key": "2026-03",
+      "notional": "100",
+      "remaining_notional": "100",
+      "status": "active",
+      "symbol": "TSLA"
+    },
+    {
+      "created_at_ny": "2026-03-16T10:43:07.828454-04:00",
+      "filled_notional_total": "0.00",
+      "id": "TSM:2026-03",
+      "limit_price": "323.45",
+      "month_key": "2026-03",
+      "notional": "60",
+      "remaining_notional": "60",
+      "status": "active",
+      "symbol": "TSM"
     }
   ],
-  "updated_at_ny": "2026-03-13T11:09:38.145292-04:00"
+  "updated_at_ny": "2026-03-16T10:43:07.828454-04:00"
 }
