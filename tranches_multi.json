@@ -1,8 +1,9 @@
 {
-  "last_sync_at_utc": "2026-03-19T14:27:15.589282Z",
+  "last_sync_at_utc": "2026-03-19T15:12:24.992000Z",
   "schema": 1,
   "seen_order_filled_notional": {
     "13514b10-7fa1-4581-b543-94190c085838": "59.98",
+    "22a4b034-a92a-4bc9-9779-a8c6352e5aaa": "99.99",
     "3eff5ec4-9ccc-4ec4-b2de-870969ad2c75": "59.99",
     "50a65341-6ffe-45bf-9985-1b4485917484": "59.98",
     "5279e0a1-448e-478c-b372-4794ba30b88f": "59.98",
@@ -10,6 +11,7 @@
     "626e8e85-7c4f-47cb-ad46-2a67c6801dba": "99.99",
     "6da394f6-93a3-4efd-8b67-696382559c28": "59.99",
     "834d20ce-8636-4fca-aff7-1e62dcce19ec": "59.99",
+    "ae1acd40-89b3-4cfb-bfbf-79390a253db3": "59.99",
     "ca667bf0-e4c3-4593-85e2-70e0e858cf09": "59.99",
     "e67c5593-8552-4d44-a093-70999466ca03": "99.99",
     "f526b8f6-33f5-460b-b708-ee1e25bf125c": "59.99"
@@ -149,13 +151,13 @@
     },
     {
       "created_at_ny": "2026-03-16T10:43:07.828454-04:00",
-      "filled_notional_total": "0.00",
+      "filled_notional_total": "59.99",
       "id": "IBIT:2026-03",
       "limit_price": "39.39",
       "month_key": "2026-03",
       "notional": "60",
-      "remaining_notional": "60",
-      "status": "active",
+      "remaining_notional": "0.00",
+      "status": "complete",
       "symbol": "IBIT"
     },
     {
@@ -259,13 +261,13 @@
     },
     {
       "created_at_ny": "2026-03-16T10:43:07.828454-04:00",
-      "filled_notional_total": "0.00",
+      "filled_notional_total": "99.99",
       "id": "TSLA:2026-03",
       "limit_price": "380.28",
       "month_key": "2026-03",
       "notional": "100",
-      "remaining_notional": "100",
-      "status": "active",
+      "remaining_notional": "0.00",
+      "status": "complete",
       "symbol": "TSLA"
     },
     {
@@ -280,5 +282,5 @@
       "symbol": "TSM"
     }
   ],
-  "updated_at_ny": "2026-03-19T10:27:15.109702-04:00"
+  "updated_at_ny": "2026-03-19T11:12:24.847237-04:00"
 }
