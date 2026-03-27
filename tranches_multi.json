@@ -1,5 +1,5 @@
 {
-  "last_sync_at_utc": "2026-03-27T14:30:43.758262Z",
+  "last_sync_at_utc": "2026-03-27T15:26:02.692127Z",
   "schema": 1,
   "seen_order_filled_notional": {
     "13514b10-7fa1-4581-b543-94190c085838": "59.98",
@@ -14,9 +14,12 @@
     "6da394f6-93a3-4efd-8b67-696382559c28": "59.99",
     "7f2f8909-d4e2-4ff7-84a4-dde74fe205e4": "59.99",
     "834d20ce-8636-4fca-aff7-1e62dcce19ec": "59.99",
+    "a3996a22-75d4-48a0-90de-0e68cf2e564c": "59.99",
     "ae1acd40-89b3-4cfb-bfbf-79390a253db3": "59.99",
+    "bf6b6a34-54dc-465a-86c0-9060fae3ae74": "59.99",
     "ca667bf0-e4c3-4593-85e2-70e0e858cf09": "59.99",
     "d23f8209-1f5d-4db5-b9ba-eaf229fb3c50": "59.99",
+    "d2729bd6-c299-4768-953e-10f6d3abcc70": "59.99",
     "e67c5593-8552-4d44-a093-70999466ca03": "99.99",
     "f526b8f6-33f5-460b-b708-ee1e25bf125c": "59.99",
     "fa28abc9-cf7f-4f52-807a-7e57746aa7e6": "99.99"
@@ -200,13 +203,13 @@
     },
     {
       "created_at_ny": "2026-03-16T10:43:07.828454-04:00",
-      "filled_notional_total": "0.00",
+      "filled_notional_total": "59.99",
       "id": "AVGO:2026-03",
       "limit_price": "307.40",
       "month_key": "2026-03",
       "notional": "60",
-      "remaining_notional": "60",
-      "status": "active",
+      "remaining_notional": "0.00",
+      "status": "complete",
       "symbol": "AVGO"
     },
     {
@@ -255,13 +258,13 @@
     },
     {
       "created_at_ny": "2026-03-16T10:43:07.828454-04:00",
-      "filled_notional_total": "0.00",
+      "filled_notional_total": "59.99",
       "id": "PLTR:2026-03",
       "limit_price": "143.79",
       "month_key": "2026-03",
       "notional": "60",
-      "remaining_notional": "60",
-      "status": "active",
+      "remaining_notional": "0.00",
+      "status": "complete",
       "symbol": "PLTR"
     },
     {
@@ -277,15 +280,15 @@
     },
     {
       "created_at_ny": "2026-03-16T10:43:07.828454-04:00",
-      "filled_notional_total": "0.00",
+      "filled_notional_total": "59.99",
       "id": "TSM:2026-03",
       "limit_price": "323.45",
       "month_key": "2026-03",
       "notional": "60",
-      "remaining_notional": "60",
-      "status": "active",
+      "remaining_notional": "0.00",
+      "status": "complete",
       "symbol": "TSM"
     }
   ],
-  "updated_at_ny": "2026-03-27T10:30:43.547758-04:00"
+  "updated_at_ny": "2026-03-27T11:26:02.300591-04:00"
 }
