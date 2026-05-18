@@ -1,5 +1,5 @@
 {
-  "last_sync_at_utc": "2026-05-18T16:38:14.718258Z",
+  "last_sync_at_utc": "2026-05-18T17:17:07.009291Z",
   "schema": 1,
   "seen_order_filled_notional": {
     "13514b10-7fa1-4581-b543-94190c085838": "59.98",
@@ -16,9 +16,12 @@
     "6da394f6-93a3-4efd-8b67-696382559c28": "59.99",
     "7f2f8909-d4e2-4ff7-84a4-dde74fe205e4": "59.99",
     "834d20ce-8636-4fca-aff7-1e62dcce19ec": "59.99",
+    "8609f3d6-f3aa-49c5-95ab-1bffac59e265": "59.99",
     "a3996a22-75d4-48a0-90de-0e68cf2e564c": "59.99",
     "ae1acd40-89b3-4cfb-bfbf-79390a253db3": "59.99",
     "bf6b6a34-54dc-465a-86c0-9060fae3ae74": "59.99",
+    "c0acb065-8a10-4d47-8003-55cf68048fc3": "59.99",
+    "c72036b3-8df3-4c78-a20b-bc75d30d220c": "59.99",
     "ca667bf0-e4c3-4593-85e2-70e0e858cf09": "59.99",
     "d23f8209-1f5d-4db5-b9ba-eaf229fb3c50": "59.99",
     "d2729bd6-c299-4768-953e-10f6d3abcc70": "59.99",
@@ -437,13 +440,13 @@
     },
     {
       "created_at_ny": "2026-05-15T11:35:24.535425-04:00",
-      "filled_notional_total": "0.00",
+      "filled_notional_total": "59.99",
       "id": "ALAB:2026-05",
       "limit_price": "217.57",
       "month_key": "2026-05",
       "notional": "60",
-      "remaining_notional": "60",
-      "status": "active",
+      "remaining_notional": "0.00",
+      "status": "complete",
       "symbol": "ALAB"
     },
     {
@@ -492,24 +495,24 @@
     },
     {
       "created_at_ny": "2026-05-15T11:35:24.535425-04:00",
-      "filled_notional_total": "0.00",
+      "filled_notional_total": "59.99",
       "id": "MRVL:2026-05",
       "limit_price": "170.91",
       "month_key": "2026-05",
       "notional": "60",
-      "remaining_notional": "60",
-      "status": "active",
+      "remaining_notional": "0.00",
+      "status": "complete",
       "symbol": "MRVL"
     },
     {
       "created_at_ny": "2026-05-15T11:35:24.535425-04:00",
-      "filled_notional_total": "0.00",
+      "filled_notional_total": "59.99",
       "id": "MU:2026-05",
       "limit_price": "701.80",
       "month_key": "2026-05",
       "notional": "60",
-      "remaining_notional": "60",
-      "status": "active",
+      "remaining_notional": "0.00",
+      "status": "complete",
       "symbol": "MU"
     },
     {
@@ -557,5 +560,5 @@
       "symbol": "TSM"
     }
   ],
-  "updated_at_ny": "2026-05-18T12:38:14.572397-04:00"
+  "updated_at_ny": "2026-05-18T13:17:06.920514-04:00"
 }
