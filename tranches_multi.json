@@ -1,5 +1,5 @@
 {
-  "last_sync_at_utc": "2026-05-19T16:36:40.310573Z",
+  "last_sync_at_utc": "2026-05-19T17:24:55.664520Z",
   "schema": 1,
   "seen_order_filled_notional": {
     "13514b10-7fa1-4581-b543-94190c085838": "59.98",
@@ -26,6 +26,7 @@
     "ca667bf0-e4c3-4593-85e2-70e0e858cf09": "59.99",
     "d23f8209-1f5d-4db5-b9ba-eaf229fb3c50": "59.99",
     "d2729bd6-c299-4768-953e-10f6d3abcc70": "59.99",
+    "e2803f85-1b92-445a-ad2b-9ed53014f55c": "99.99",
     "e67c5593-8552-4d44-a093-70999466ca03": "99.99",
     "f4b00bb0-8b08-4744-aadb-723b1f09d7b8": "59.99",
     "f526b8f6-33f5-460b-b708-ee1e25bf125c": "59.99",
@@ -540,13 +541,13 @@
     },
     {
       "created_at_ny": "2026-05-15T11:35:24.535425-04:00",
-      "filled_notional_total": "0.00",
+      "filled_notional_total": "99.99",
       "id": "TSLA:2026-05",
       "limit_price": "405.27",
       "month_key": "2026-05",
       "notional": "100",
-      "remaining_notional": "100",
-      "status": "active",
+      "remaining_notional": "0.00",
+      "status": "complete",
       "symbol": "TSLA"
     },
     {
@@ -561,5 +562,5 @@
       "symbol": "TSM"
     }
   ],
-  "updated_at_ny": "2026-05-19T12:36:40.198432-04:00"
+  "updated_at_ny": "2026-05-19T13:24:55.567308-04:00"
 }
