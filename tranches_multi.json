@@ -1,5 +1,5 @@
 {
-  "last_sync_at_utc": "2026-06-05T15:46:14.748007Z",
+  "last_sync_at_utc": "2026-06-05T16:11:09.751923Z",
   "schema": 1,
   "seen_order_filled_notional": {
     "13350c22-933b-4e11-9bf4-f15696afd62f": "99.99",
@@ -32,6 +32,7 @@
     "e2803f85-1b92-445a-ad2b-9ed53014f55c": "99.99",
     "e67c5593-8552-4d44-a093-70999466ca03": "99.99",
     "f4b00bb0-8b08-4744-aadb-723b1f09d7b8": "59.99",
+    "f515ddbb-871a-4b7b-9dc3-956775f8e711": "59.98",
     "f526b8f6-33f5-460b-b708-ee1e25bf125c": "59.99",
     "fa28abc9-cf7f-4f52-807a-7e57746aa7e6": "99.99"
   },
@@ -478,12 +479,12 @@
     },
     {
       "created_at_ny": "2026-05-15T11:35:24.535425-04:00",
-      "filled_notional_total": "0.00",
+      "filled_notional_total": "59.98",
       "id": "AVGO:2026-05",
       "limit_price": "405.20",
       "month_key": "2026-05",
       "notional": "60",
-      "remaining_notional": "60",
+      "remaining_notional": "0.02",
       "status": "active",
       "symbol": "AVGO"
     },
@@ -565,5 +566,5 @@
       "symbol": "TSM"
     }
   ],
-  "updated_at_ny": "2026-06-05T11:46:14.651784-04:00"
+  "updated_at_ny": "2026-06-05T12:11:09.673906-04:00"
 }
