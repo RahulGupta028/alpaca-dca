@@ -1,5 +1,5 @@
 {
-  "last_sync_at_utc": "2026-06-16T18:42:30.464391Z",
+  "last_sync_at_utc": "2026-06-17T16:44:51.648766Z",
   "schema": 1,
   "seen_order_filled_notional": {
     "13350c22-933b-4e11-9bf4-f15696afd62f": "99.99",
@@ -8,6 +8,7 @@
     "26d34473-f0e3-4a89-ae6e-c0149cc8ca0c": "59.99",
     "29421291-44e6-4305-a63b-de8628322db5": "59.99",
     "3ad93cb0-67c4-41e9-a5fb-c0f6a05e4f21": "59.98",
+    "3ddd0ab0-76f1-4bdd-978a-022f4591dd82": "59.98",
     "3eff5ec4-9ccc-4ec4-b2de-870969ad2c75": "59.99",
     "4e921cf7-9045-4044-8ea6-ad5ccfc02f96": "59.99",
     "50a65341-6ffe-45bf-9985-1b4485917484": "59.98",
@@ -19,7 +20,10 @@
     "7f2f8909-d4e2-4ff7-84a4-dde74fe205e4": "59.99",
     "834d20ce-8636-4fca-aff7-1e62dcce19ec": "59.99",
     "8609f3d6-f3aa-49c5-95ab-1bffac59e265": "59.99",
+    "8a77f2da-028c-400d-a318-7f2251d8bd4b": "59.98",
+    "8e967c40-7d2e-4458-8d26-bb8be6be0351": "59.98",
     "a3996a22-75d4-48a0-90de-0e68cf2e564c": "59.99",
+    "aa20a5c3-97ea-4ce7-9bec-0ff0d3cfb533": "59.98",
     "ae1acd40-89b3-4cfb-bfbf-79390a253db3": "59.99",
     "b659e80e-930d-4f7c-9f2e-862a2a6eadc4": "59.99",
     "bf6b6a34-54dc-465a-86c0-9060fae3ae74": "59.99",
@@ -580,12 +584,12 @@
     },
     {
       "created_at_ny": "2026-06-15T14:06:42.422143-04:00",
-      "filled_notional_total": "0.00",
+      "filled_notional_total": "59.98",
       "id": "ALAB:2026-06",
       "limit_price": "368.23",
       "month_key": "2026-06",
       "notional": "60",
-      "remaining_notional": "60",
+      "remaining_notional": "0.02",
       "status": "active",
       "symbol": "ALAB"
     },
@@ -624,34 +628,34 @@
     },
     {
       "created_at_ny": "2026-06-15T14:06:42.422143-04:00",
-      "filled_notional_total": "0.00",
+      "filled_notional_total": "59.98",
       "id": "ASML:2026-06",
       "limit_price": "1810.23",
       "month_key": "2026-06",
       "notional": "60",
-      "remaining_notional": "60",
+      "remaining_notional": "0.02",
       "status": "active",
       "symbol": "ASML"
     },
     {
       "created_at_ny": "2026-06-15T14:06:42.422143-04:00",
-      "filled_notional_total": "0.00",
+      "filled_notional_total": "59.98",
       "id": "MRVL:2026-06",
       "limit_price": "290.21",
       "month_key": "2026-06",
       "notional": "60",
-      "remaining_notional": "60",
+      "remaining_notional": "0.02",
       "status": "active",
       "symbol": "MRVL"
     },
     {
       "created_at_ny": "2026-06-15T14:06:42.422143-04:00",
-      "filled_notional_total": "0.00",
+      "filled_notional_total": "59.98",
       "id": "MU:2026-06",
       "limit_price": "1021.57",
       "month_key": "2026-06",
       "notional": "60",
-      "remaining_notional": "60",
+      "remaining_notional": "0.02",
       "status": "active",
       "symbol": "MU"
     },
@@ -700,5 +704,5 @@
       "symbol": "TSM"
     }
   ],
-  "updated_at_ny": "2026-06-16T14:42:29.969210-04:00"
+  "updated_at_ny": "2026-06-17T12:44:51.269030-04:00"
 }
