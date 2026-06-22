@@ -1,5 +1,5 @@
 {
-  "last_sync_at_utc": "2026-06-22T18:00:39.505874Z",
+  "last_sync_at_utc": "2026-06-22T18:31:32.395462Z",
   "schema": 1,
   "seen_order_filled_notional": {
     "13350c22-933b-4e11-9bf4-f15696afd62f": "99.99",
@@ -15,6 +15,8 @@
     "5279e0a1-448e-478c-b372-4794ba30b88f": "59.98",
     "53fe007f-5570-4590-8634-cba195f09263": "59.99",
     "576c88b5-2c51-4191-a59a-51a5c0de4fa4": "59.98",
+    "5fa0592d-9e2f-4c79-ab1f-2b6ce7bcbd53": "59.98",
+    "618284d9-f5f5-49f1-a547-327f3dd9427d": "59.98",
     "626e8e85-7c4f-47cb-ad46-2a67c6801dba": "99.99",
     "6da394f6-93a3-4efd-8b67-696382559c28": "59.99",
     "7cf9c6aa-c0f8-4060-94c4-6b8150ae2f83": "59.98",
@@ -541,12 +543,12 @@
     },
     {
       "created_at_ny": "2026-05-15T11:35:24.535425-04:00",
-      "filled_notional_total": "0.00",
+      "filled_notional_total": "59.98",
       "id": "PLTR:2026-05",
       "limit_price": "127.20",
       "month_key": "2026-05",
       "notional": "60",
-      "remaining_notional": "60",
+      "remaining_notional": "0.02",
       "status": "active",
       "symbol": "PLTR"
     },
@@ -673,12 +675,12 @@
     },
     {
       "created_at_ny": "2026-06-15T14:06:42.422143-04:00",
-      "filled_notional_total": "0.00",
+      "filled_notional_total": "59.98",
       "id": "PLTR:2026-06",
       "limit_price": "126.88",
       "month_key": "2026-06",
       "notional": "60",
-      "remaining_notional": "60",
+      "remaining_notional": "0.02",
       "status": "active",
       "symbol": "PLTR"
     },
@@ -705,5 +707,5 @@
       "symbol": "TSM"
     }
   ],
-  "updated_at_ny": "2026-06-22T14:00:39.075757-04:00"
+  "updated_at_ny": "2026-06-22T14:31:31.976831-04:00"
 }
