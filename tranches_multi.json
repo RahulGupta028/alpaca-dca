@@ -1,5 +1,5 @@
 {
-  "last_sync_at_utc": "2026-07-16T15:16:37.619243Z",
+  "last_sync_at_utc": "2026-07-16T15:56:01.372562Z",
   "schema": 1,
   "seen_order_filled_notional": {
     "13350c22-933b-4e11-9bf4-f15696afd62f": "99.99",
@@ -8,6 +8,7 @@
     "26d34473-f0e3-4a89-ae6e-c0149cc8ca0c": "59.99",
     "29421291-44e6-4305-a63b-de8628322db5": "59.99",
     "3ad93cb0-67c4-41e9-a5fb-c0f6a05e4f21": "59.98",
+    "3b978844-795b-461c-8fd3-c204104e8178": "59.98",
     "3ddd0ab0-76f1-4bdd-978a-022f4591dd82": "59.98",
     "3eff5ec4-9ccc-4ec4-b2de-870969ad2c75": "59.99",
     "4e921cf7-9045-4044-8ea6-ad5ccfc02f96": "59.99",
@@ -22,6 +23,7 @@
     "6c4d3fae-11af-4785-96b4-be5fc183c9c4": "59.98",
     "6da394f6-93a3-4efd-8b67-696382559c28": "59.99",
     "705c3ce2-8edc-4750-b3dd-416bf260fe89": "59.98",
+    "786c6e4a-23b9-4e0e-9959-71019a3bdfb0": "59.98",
     "7cf9c6aa-c0f8-4060-94c4-6b8150ae2f83": "59.98",
     "7f2f8909-d4e2-4ff7-84a4-dde74fe205e4": "59.99",
     "834d20ce-8636-4fca-aff7-1e62dcce19ec": "59.99",
@@ -32,6 +34,7 @@
     "a3996a22-75d4-48a0-90de-0e68cf2e564c": "59.99",
     "aa20a5c3-97ea-4ce7-9bec-0ff0d3cfb533": "59.98",
     "ae1acd40-89b3-4cfb-bfbf-79390a253db3": "59.99",
+    "b5e3699a-0935-4c05-b7b4-9fcdc379cbd9": "59.98",
     "b659e80e-930d-4f7c-9f2e-862a2a6eadc4": "59.99",
     "bf6b6a34-54dc-465a-86c0-9060fae3ae74": "59.99",
     "c0acb065-8a10-4d47-8003-55cf68048fc3": "59.99",
@@ -43,6 +46,7 @@
     "d6616f3c-c5cf-490d-923b-299bb0bf1782": "59.99",
     "da24abd2-a274-49da-a6eb-d80e3d928ac3": "59.98",
     "e2803f85-1b92-445a-ad2b-9ed53014f55c": "99.99",
+    "e4993be5-f3d5-4b92-8073-c498d01196f7": "59.98",
     "e67c5593-8552-4d44-a093-70999466ca03": "99.99",
     "f4b00bb0-8b08-4744-aadb-723b1f09d7b8": "59.99",
     "f515ddbb-871a-4b7b-9dc3-956775f8e711": "59.98",
@@ -724,12 +728,12 @@
     },
     {
       "created_at_ny": "2026-07-15T11:06:25.555888-04:00",
-      "filled_notional_total": "0.00",
+      "filled_notional_total": "59.98",
       "id": "ALAB:2026-07",
       "limit_price": "327.00",
       "month_key": "2026-07",
       "notional": "60",
-      "remaining_notional": "60",
+      "remaining_notional": "0.02",
       "status": "active",
       "symbol": "ALAB"
     },
@@ -746,12 +750,12 @@
     },
     {
       "created_at_ny": "2026-07-15T11:06:25.555888-04:00",
-      "filled_notional_total": "0.00",
+      "filled_notional_total": "59.98",
       "id": "ARM:2026-07",
       "limit_price": "260.92",
       "month_key": "2026-07",
       "notional": "60",
-      "remaining_notional": "60",
+      "remaining_notional": "0.02",
       "status": "active",
       "symbol": "ARM"
     },
@@ -779,23 +783,23 @@
     },
     {
       "created_at_ny": "2026-07-15T11:06:25.555888-04:00",
-      "filled_notional_total": "0.00",
+      "filled_notional_total": "59.98",
       "id": "MRVL:2026-07",
       "limit_price": "199.00",
       "month_key": "2026-07",
       "notional": "60",
-      "remaining_notional": "60",
+      "remaining_notional": "0.02",
       "status": "active",
       "symbol": "MRVL"
     },
     {
       "created_at_ny": "2026-07-15T11:06:25.555888-04:00",
-      "filled_notional_total": "0.00",
+      "filled_notional_total": "59.98",
       "id": "MU:2026-07",
       "limit_price": "867.35",
       "month_key": "2026-07",
       "notional": "60",
-      "remaining_notional": "60",
+      "remaining_notional": "0.02",
       "status": "active",
       "symbol": "MU"
     },
@@ -844,5 +848,5 @@
       "symbol": "TSM"
     }
   ],
-  "updated_at_ny": "2026-07-16T11:16:37.403172-04:00"
+  "updated_at_ny": "2026-07-16T11:56:01.205572-04:00"
 }
