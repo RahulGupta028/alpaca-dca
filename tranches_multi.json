@@ -1,5 +1,5 @@
 {
-  "last_sync_at_utc": "2026-07-17T14:55:55.848747Z",
+  "last_sync_at_utc": "2026-07-17T15:55:24.713270Z",
   "schema": 1,
   "seen_order_filled_notional": {
     "13350c22-933b-4e11-9bf4-f15696afd62f": "99.99",
@@ -9,6 +9,7 @@
     "29421291-44e6-4305-a63b-de8628322db5": "59.99",
     "3ad93cb0-67c4-41e9-a5fb-c0f6a05e4f21": "59.98",
     "3b978844-795b-461c-8fd3-c204104e8178": "59.98",
+    "3cdd42f0-66f8-42d6-863c-596ac32dd99d": "59.98",
     "3ddd0ab0-76f1-4bdd-978a-022f4591dd82": "59.98",
     "3eff5ec4-9ccc-4ec4-b2de-870969ad2c75": "59.99",
     "4e921cf7-9045-4044-8ea6-ad5ccfc02f96": "59.99",
@@ -48,6 +49,7 @@
     "da24abd2-a274-49da-a6eb-d80e3d928ac3": "59.98",
     "e2803f85-1b92-445a-ad2b-9ed53014f55c": "99.99",
     "e4993be5-f3d5-4b92-8073-c498d01196f7": "59.98",
+    "e4ab5511-ba1b-4fab-b30c-2f185d802926": "59.98",
     "e67c5593-8552-4d44-a093-70999466ca03": "99.99",
     "f4b00bb0-8b08-4744-aadb-723b1f09d7b8": "59.99",
     "f515ddbb-871a-4b7b-9dc3-956775f8e711": "59.98",
@@ -762,12 +764,12 @@
     },
     {
       "created_at_ny": "2026-07-15T11:06:25.555888-04:00",
-      "filled_notional_total": "0.00",
+      "filled_notional_total": "59.98",
       "id": "AVGO:2026-07",
       "limit_price": "370.89",
       "month_key": "2026-07",
       "notional": "60",
-      "remaining_notional": "60",
+      "remaining_notional": "0.02",
       "status": "active",
       "symbol": "AVGO"
     },
@@ -839,15 +841,15 @@
     },
     {
       "created_at_ny": "2026-07-15T11:06:25.555888-04:00",
-      "filled_notional_total": "0.00",
+      "filled_notional_total": "59.98",
       "id": "TSM:2026-07",
       "limit_price": "398.91",
       "month_key": "2026-07",
       "notional": "60",
-      "remaining_notional": "60",
+      "remaining_notional": "0.02",
       "status": "active",
       "symbol": "TSM"
     }
   ],
-  "updated_at_ny": "2026-07-17T10:55:55.757049-04:00"
+  "updated_at_ny": "2026-07-17T11:55:24.436088-04:00"
 }
