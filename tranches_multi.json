@@ -1,5 +1,5 @@
 {
-  "last_sync_at_utc": "2026-07-16T15:56:01.372562Z",
+  "last_sync_at_utc": "2026-07-17T14:55:55.848747Z",
   "schema": 1,
   "seen_order_filled_notional": {
     "13350c22-933b-4e11-9bf4-f15696afd62f": "99.99",
@@ -32,6 +32,7 @@
     "8a77f2da-028c-400d-a318-7f2251d8bd4b": "59.98",
     "8e967c40-7d2e-4458-8d26-bb8be6be0351": "59.98",
     "a3996a22-75d4-48a0-90de-0e68cf2e564c": "59.99",
+    "a9a08ce4-bfdc-4916-a688-5e91b04da497": "59.98",
     "aa20a5c3-97ea-4ce7-9bec-0ff0d3cfb533": "59.98",
     "ae1acd40-89b3-4cfb-bfbf-79390a253db3": "59.99",
     "b5e3699a-0935-4c05-b7b4-9fcdc379cbd9": "59.98",
@@ -739,12 +740,12 @@
     },
     {
       "created_at_ny": "2026-07-15T11:06:25.555888-04:00",
-      "filled_notional_total": "0.00",
+      "filled_notional_total": "59.98",
       "id": "AMD:2026-07",
       "limit_price": "493.02",
       "month_key": "2026-07",
       "notional": "60",
-      "remaining_notional": "60",
+      "remaining_notional": "0.02",
       "status": "active",
       "symbol": "AMD"
     },
@@ -848,5 +849,5 @@
       "symbol": "TSM"
     }
   ],
-  "updated_at_ny": "2026-07-16T11:56:01.205572-04:00"
+  "updated_at_ny": "2026-07-17T10:55:55.757049-04:00"
 }
