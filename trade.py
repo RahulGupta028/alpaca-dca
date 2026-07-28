@@ -49,7 +49,7 @@ NY = ZoneInfo("America/New_York")
 
 API_KEY = os.environ["ALPACA_API_KEY"]
 SECRET_KEY = os.environ["ALPACA_SECRET_KEY"]
-PAPER = os.environ.get("ALPACA_PAPER", "false").lower() == "true"
+PAPER = os.environ.get("ALPACA_PAPER", "true").lower() == "true"
 
 trading = TradingClient(API_KEY, SECRET_KEY, paper=PAPER)
 data = StockHistoricalDataClient(API_KEY, SECRET_KEY)
