@@ -1,5 +1,5 @@
 {
-  "last_sync_at_utc": "2026-08-18T15:01:25.037041Z",
+  "last_sync_at_utc": "2026-08-19T14:06:38.026193Z",
   "schema": 1,
   "seen_order_filled_notional": {
     "13350c22-933b-4e11-9bf4-f15696afd62f": "99.99",
@@ -60,6 +60,7 @@
     "e4ab5511-ba1b-4fab-b30c-2f185d802926": "59.98",
     "e67c5593-8552-4d44-a093-70999466ca03": "99.99",
     "e6ec3b36-87b8-453c-bcb3-b5230b81c96a": "59.98",
+    "ee1a4ad4-edf2-48a7-8eba-3aa8e4b0091b": "59.98",
     "f1733ea7-6f6f-475f-8d82-228ed557ae16": "59.98",
     "f4b00bb0-8b08-4744-aadb-723b1f09d7b8": "59.99",
     "f515ddbb-871a-4b7b-9dc3-956775f8e711": "59.98",
@@ -918,12 +919,12 @@
     },
     {
       "created_at_ny": "2026-08-17T10:01:40.872136-04:00",
-      "filled_notional_total": "0.00",
+      "filled_notional_total": "59.98",
       "id": "ASML:2026-08",
       "limit_price": "1778.31",
       "month_key": "2026-08",
       "notional": "60",
-      "remaining_notional": "60",
+      "remaining_notional": "0.02",
       "status": "active",
       "symbol": "ASML"
     },
@@ -994,5 +995,5 @@
       "symbol": "TSM"
     }
   ],
-  "updated_at_ny": "2026-08-18T11:01:24.729659-04:00"
+  "updated_at_ny": "2026-08-19T10:06:37.934245-04:00"
 }
