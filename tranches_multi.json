@@ -1,5 +1,5 @@
 {
-  "last_sync_at_utc": "2026-08-21T14:06:37.511365Z",
+  "last_sync_at_utc": "2026-08-21T15:03:43.501558Z",
   "schema": 1,
   "seen_order_filled_notional": {
     "13350c22-933b-4e11-9bf4-f15696afd62f": "99.99",
@@ -40,6 +40,7 @@
     "8e967c40-7d2e-4458-8d26-bb8be6be0351": "59.98",
     "8f9d1248-3904-4630-91ff-dfe2f935cfa4": "59.98",
     "a3996a22-75d4-48a0-90de-0e68cf2e564c": "59.99",
+    "a74b189a-c91a-41f7-b964-4ebf0beee693": "99.98",
     "a9a08ce4-bfdc-4916-a688-5e91b04da497": "59.98",
     "aa20a5c3-97ea-4ce7-9bec-0ff0d3cfb533": "59.98",
     "ae1acd40-89b3-4cfb-bfbf-79390a253db3": "59.99",
@@ -953,12 +954,12 @@
     },
     {
       "created_at_ny": "2026-08-17T10:01:40.872136-04:00",
-      "filled_notional_total": "0.00",
+      "filled_notional_total": "99.98",
       "id": "NVDA:2026-08",
       "limit_price": "214.76",
       "month_key": "2026-08",
       "notional": "100",
-      "remaining_notional": "100",
+      "remaining_notional": "0.02",
       "status": "active",
       "symbol": "NVDA"
     },
@@ -996,5 +997,5 @@
       "symbol": "TSM"
     }
   ],
-  "updated_at_ny": "2026-08-21T10:06:37.281957-04:00"
+  "updated_at_ny": "2026-08-21T11:03:43.184167-04:00"
 }
