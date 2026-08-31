@@ -1,5 +1,5 @@
 {
-  "last_sync_at_utc": "2026-08-31T19:33:54.851174Z",
+  "last_sync_at_utc": "2026-08-31T20:15:54.710522Z",
   "schema": 1,
   "seen_order_filled_notional": {
     "13350c22-933b-4e11-9bf4-f15696afd62f": "99.99",
@@ -998,5 +998,5 @@
       "symbol": "TSM"
     }
   ],
-  "updated_at_ny": "2026-08-31T15:33:54.710420-04:00"
+  "updated_at_ny": "2026-08-31T16:15:54.391217-04:00"
 }
