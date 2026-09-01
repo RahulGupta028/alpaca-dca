@@ -30,6 +30,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # <-- required for committing state
           ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
-          ALPACA_PAPER: "true" 
+          ALPACA_PAPER: "false" 
           FORCE_CREATE_TRANCHES: "false"
         run: python trade.py
